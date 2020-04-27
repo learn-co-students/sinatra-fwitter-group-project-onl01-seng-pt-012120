@@ -15,13 +15,12 @@ class UsersController < ApplicationController
 		else
 			redirect "/tweets"
 		end
-		
 	end
 
 	post "/signup" do
 		user = User.new(params)
 		if user.save
-			redirect "/login"
+			login(params[:username], params[:password])
 		else
 			redirect "/signup"
 		end
@@ -42,14 +41,9 @@ class UsersController < ApplicationController
 	end
 
 	get "/users/:slug" do
-		if logged_in?
-			@user = User.friendly.find(params[:slug]) 
+		@user = User.friendly.find(params[:slug]) 
 
-			erb :'/users/show'
-		else
-			redirect "/login"
-		end
-		
+		erb :'/users/show'
 	end
 
 
