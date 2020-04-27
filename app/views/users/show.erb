@@ -1,0 +1,8 @@
+<h4>All my tweets:</h4>
+
+<ol>
+	<% @user.tweets.each.with_index(1) do |tweet| %>
+		<li><%= tweet.content %> <a href="/tweets/<%= tweet.id %>">&nbsp;[show]</a> </li> 
+	<% end %>
+</ol>
+
