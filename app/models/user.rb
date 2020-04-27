@@ -1,4 +1,11 @@
 class User < ActiveRecord::Base
-  has_secure_password
-  has_many :tweets
+
+	extend FriendlyId
+	friendly_id :username, use: :slugged
+	
+	has_secure_password
+
+	validates :username, :email, :presence => true
+
+	has_many :tweets
 end

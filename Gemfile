@@ -11,6 +11,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
+gem "friendly_id", :require => 'friendly_id'
 
 group :test do
   gem 'rspec'

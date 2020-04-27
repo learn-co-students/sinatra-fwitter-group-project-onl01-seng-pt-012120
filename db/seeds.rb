@@ -1,0 +1,3 @@
+Tweet.create(content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", user_id: 1)
+Tweet.create(content: "Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.", user_id: 1)
+Tweet.create(content: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", user_id: 1)
