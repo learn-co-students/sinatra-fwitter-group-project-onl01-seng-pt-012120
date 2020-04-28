@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-
+        redirect "/tweets"
     end
 
     get "/signup" do
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
     post "/signup" do
 
+        redirect "/login"
     end
 
     get "/logout" do
