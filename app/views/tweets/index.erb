@@ -1,0 +1,12 @@
+<h1>Welcome, <%= User.find(session[:user_id]).username %></h1>
+
+<ul>
+  <% @tweets.each do |x| %>
+  <li>By:<%= x.user.username %></li>
+  <li><%= x.content %></li><br>
+  <% end %>
+</ul>
+<form action="/logout" method="post">
+  Logout?
+  <input type="submit" name="logout" >
+</form>
