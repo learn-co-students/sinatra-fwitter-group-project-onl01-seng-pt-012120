@@ -1,0 +1,13 @@
+<html>
+  <title>Fwitter</title>
+  <body>
+    <h1>Tweet</h1>
+    <h5><a href="/tweets">Back</a></h5>
+    <p><%= @tweet.content %></p>
+    <% link = "/tweets/#{@tweet.id}/edit" %>
+    <h4><a href="<%= link %>">Edit Tweet</a></h4>
+    <form method="post" action="/tweets/<%= @tweet.id %>/delete">
+      <input type="submit" value="Delete Tweet">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+  <title>Fwitter</title>
+  <body>
+    <h1>Edit Your Tweet</h1>
+    <h5><a href="/tweets/<%= @tweet.id %>">Back</a></h5>
+    <br>
+    <br>
+    <form method="post" action="/tweets/<%= @tweet.id %>">
+      <label for="content">Edit:</label>
+      <input type="text" id="content" name="content" value="<%= @tweet.content %>">
+      <input type="submit" id="submit" value="Edit Tweet">
+    </form>
+  </body>
+</html>
