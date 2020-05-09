@@ -1,0 +1,12 @@
+<% if @user.logged_in? %>
+
+    <h1> Welcome <%= Helpers.current_user(session).username %></h1>
+    <h3><a href="/logout">Log Out</a></h4>
+<% end %>
+
+<h1><%= @user.name %>'s Tweets</h1>
+
+<% @user.tweets.each do |tweet| %>
+    <a href="/tweets/<%=tweet.id%>"> <%= tweet.content %> </a>
+    <br></br>
+<% end %>
