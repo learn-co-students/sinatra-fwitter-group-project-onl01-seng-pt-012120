@@ -1,0 +1,12 @@
+<html>
+  <title>Fwitter</title>
+  <body>
+    <h1><%= @user.username %>'s Tweets</h1>
+    <h5><a href="/tweets">Back</a></h5>
+    <% i = 1 %>
+    <% @tweets.each do |tweet| %>
+    <p><%= "#{i}. #{tweet.content}" %></p>
+    <% i += 1 %>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <title>Fwitter</title>
+  <body>
+    <h1>Welcome, <%= @user.username %></h1><br>
+    <h3><a href="/tweets/new">Compose Tweet</a></h3>
+    <h3>Your Tweets</h3>
+    <% @tweets.each do |tweet| %>
+    <% link = "/tweets/#{tweet.id}" %>
+    <p><a href="<%= link %>"><%= tweet.content %></a></p>
+    <% end %>
+    <h3>All Other Tweets</h3>
+    <% d = 1 %>
+    <% @all_tweets.each do |tw| %>
+    <% id = tw.user_id %>
+    <p><%= tw.content %> - <%= @users.find(id).username %></p>
+    <% d += 1 %>
+    <% end %>
+    <h3>All Fwitter Users</h3>
+    <% i = 1%>
+    <% @users.each do |user| %>
+    <a href="/users/<%= user.id %>"><%= "#{i}. #{user.username}" %></a><br><br>
+    <% i += 1 %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+    <h5><a href="/logout">Log Out</a></h5>
+  </body>
+</html>
