@@ -1,0 +1,13 @@
+
+<h2>Welcome, <%= Helpers.current_user(session).username %></h2>
+
+<a href="/tweets/new">New Tweet</a>
+
+<h3>All Tweets</h3>
+<ul>
+  <% Tweet.all.each do |tweet| %>
+    <li>
+      <%= tweet.content %>
+    </li>
+  <% end %>
+</ul>
